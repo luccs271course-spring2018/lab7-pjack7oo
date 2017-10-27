@@ -5,28 +5,24 @@ import java.util.Scanner;
 
 public class ReverseLines {
 
-	public static void main(String[] args) {
-		// done read successive input lines until EOF, then print out in reverse order
-		LinkedStack<String> stack = new LinkedStack<String>();
+	public static String temp = "";
+	public static void main(final String[] args) {
+		final Scanner input = new Scanner(System.in);
+		printReverse(input);
+	}
 
+	private static void printReverse(final Scanner input) {
+		// TODO recursively read and print successive input lines until EOF, then print them out in reverse order
 
-    final Scanner input = new Scanner(System.in);
-		String line = null;
-		while (input.hasNextLine())
-		{
-			line = input.nextLine();
-			stack.push(line);
+		if(input.hasNext()) {
+			temp += input.nextLine() + "\n";
+			System.out.println(temp);
+			printReverse(input);
+
 		}
-
-		String tempWord= "";
-		while( !stack.isEmpty())
-		{
-			tempWord += "\n" + stack.pop();
+		else {
+			System.out.println(temp);
+			return;
 		}
-
-		System.out.println(tempWord);
-
-
-
 	}
 }
