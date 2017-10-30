@@ -4,25 +4,21 @@ import java.util.Scanner;
 
 
 public class ReverseLines {
-	public static String temp2;
-	public static String temp = "";
 	public static void main(final String[] args) {
 		final Scanner input = new Scanner(System.in);
 		printReverse(input);
 	}
 
 	private static void printReverse(final Scanner input) {
-		// TODO recursively read and print successive input lines until EOF, then print them out in reverse order
+		// done recursively read and print successive input lines until EOF, then print them out in reverse order
 
 		if(input.hasNext()) {
-
-			temp2 = input.nextLine();
-			temp +=temp2 + "\n";
-			System.out.println(temp2);
+			String temp = input.nextLine();
+			System.out.println(temp);
 			printReverse(input);
+			System.out.println(temp);
 		}
 		else {
-			System.out.println(temp);
 			return;
 		}
 	}

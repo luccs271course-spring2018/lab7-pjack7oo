@@ -60,7 +60,7 @@ public class LinkedStack<E> implements IStack<E> {
   private void populateList(final Node<E> curr, final List<E> result) {
     // done recursively populate the list in the desired order
     if(curr == null) {
-
+    return;
     }
     else {
       result.add(curr.data);
@@ -78,7 +78,7 @@ public class LinkedStack<E> implements IStack<E> {
   private void populateFifoList(final Node<E> curr, final List<E> result) {
     // done recursively populate the list in the desired order
     if(curr == null) {
-
+    return;
     }
     else {
       result.add(0,curr.data);
