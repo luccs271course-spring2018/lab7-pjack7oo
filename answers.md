@@ -10,4 +10,4 @@ What are the time and space complexity of each of the populateList populateFifoL
 printReverse: time O(n) space O(n) populateList: time O(n) space O(n) populateFifoList: time O(n) space O(n)
 
 Which of these methods can be implemented using while loops?
-All three can be done using a while loop.
+PrintReverse can't become a while loop because the recursion isn't the tail, while the other two can be made to run as while loops.
